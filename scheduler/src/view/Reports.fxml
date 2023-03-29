@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="575.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Reports">
+   <children>
+
+      <Label layoutX="39.0" layoutY="14.0" text="Reports">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="reportTable" layoutX="19.0" layoutY="59.0" prefHeight="288.0" prefWidth="812.0">
+         <columns>
+            <TableColumn fx:id="aptIDCol" prefWidth="105.0" text="Appointment ID" />
+            <TableColumn fx:id="aptTitleCol" prefWidth="111.0" text="Title" />
+            <TableColumn fx:id="aptDescCol" prefWidth="122.0" text="Description" />
+            <TableColumn fx:id="aptTypeCol" prefWidth="126.0" text="Type" />
+            <TableColumn fx:id="aptStartCol" prefWidth="130.0" text="Start Date and Time" />
+            <TableColumn fx:id="aptEndCol" prefWidth="123.0" text="End Date and Time" />
+            <TableColumn fx:id="aptCustIDCol" prefWidth="91.0" text="Customer ID" />
+         </columns>
+      </TableView>
+      <Button layoutX="756.0" layoutY="19.0" mnemonicParsing="false" onAction="#toLanding" prefHeight="25.0" prefWidth="66.0" text="Back" />
+      <ComboBox fx:id="contactCB" layoutX="166.0" layoutY="19.0" onAction="#firstReport" prefHeight="25.0" prefWidth="190.0" promptText="-select a contact-" />
+      <Label layoutX="396.0" layoutY="23.0" text="Select a contact to view their scheduled appointments below" />
+      <Label layoutX="105.0" layoutY="373.0" text="Number of appointments by Month and Type" />
+      <TextArea fx:id="monthTypeField" layoutX="69.0" layoutY="414.0" prefHeight="130.0" prefWidth="313.0" />
+      <Label layoutX="494.0" layoutY="373.0" text="Average number of appointments per customer" />
+      <Label fx:id="avgAptsLabel" layoutX="599.0" layoutY="414.0" text="Average number" />
+   </children>
+</AnchorPane>

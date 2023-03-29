@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Appointments">
+   <children>
+      <Label layoutX="30.0" layoutY="19.0" text="Appointments">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+       <Button layoutX="890.0" layoutY="24.0" mnemonicParsing="false" onAction="#toLanding" prefHeight="25.0" prefWidth="78.0" text="Back" />
+       <Button layoutX="460.0" layoutY="24.0" mnemonicParsing="false" onAction="#newAppointment" prefHeight="25.0" prefWidth="114.0" text="New Appointment" />
+       <Button layoutX="600.0" layoutY="24.0" mnemonicParsing="false" onAction="#modAppointment" prefHeight="25.0" prefWidth="114.0" text="Modify Selected" />
+       <Button layoutX="740.0" layoutY="24.0" mnemonicParsing="false" onAction="#deleteAppointment" prefHeight="25.0" prefWidth="114.0" text="Delete Selected" />
+       <Button layoutX="884.0" layoutY="356.0" mnemonicParsing="false" onAction="#exitProgram" prefHeight="25.0" prefWidth="90.0" text="Exit program" />
+      <Label fx:id="errorMessage" alignment="CENTER" layoutX="190.0" layoutY="12.0" prefHeight="48.0" prefWidth="258.0" text="Error Message" textFill="RED" />
+      <TableView fx:id="aptsTable" layoutX="30.0" layoutY="62.0" prefHeight="288.0" prefWidth="941.0">
+        <columns>
+          <TableColumn fx:id="aptIDCol" prefWidth="102.0" text="Appointment ID" />
+            <TableColumn fx:id="aptTitleCol" prefWidth="103.0" text="Title" />
+            <TableColumn fx:id="aptDescCol" prefWidth="95.0" text="Description" />
+            <TableColumn fx:id="aptLocCol" prefWidth="107.0" text="Location" />
+          <TableColumn fx:id="aptContactCol" prefWidth="74.0" text="Contact" />
+            <TableColumn fx:id="aptTypeCol" prefWidth="81.0" text="Type" />
+            <TableColumn fx:id="aptStartCol" prefWidth="115.0" text="Start Date/Time" />
+            <TableColumn fx:id="aptEndCol" prefWidth="112.0" text="End Date/Time" />
+            <TableColumn fx:id="aptCustIDCol" prefWidth="77.0" text="Customer ID" />
+            <TableColumn fx:id="aptUserIDCol" prefWidth="74.0" text="User ID" />
+        </columns>
+      </TableView>
+       <Label fx:id="timeMsg" alignment="CENTER" layoutX="600.0" layoutY="360.0" text="Times are local" />
+      <RadioButton fx:id="weekViewBtn" layoutX="332.0" layoutY="360.0" mnemonicParsing="false" onAction="#weekView" text="Week view" />
+      <RadioButton fx:id="monthViewBtn" layoutX="433.0" layoutY="360.0" mnemonicParsing="false" onAction="#monthView" text="Month view" />
+      <RadioButton fx:id="defaultViewBtn" layoutX="216.0" layoutY="360.0" mnemonicParsing="false" onAction="#toDefaultView" text="Default view" />
+   </children>
+</AnchorPane>

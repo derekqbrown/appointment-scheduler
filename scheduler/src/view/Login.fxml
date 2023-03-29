@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="250.0" prefWidth="375.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Login">
+   <children>
+      <TextField fx:id="usernameLogin" layoutX="60.0" layoutY="90.0" prefHeight="25.0" prefWidth="260.0" promptText="Username" />
+      <TextField fx:id="passwordLogin" layoutX="60.0" layoutY="140.0" prefHeight="25.0" prefWidth="260.0" promptText="Password" />
+      <Label fx:id="userLoginLabel" layoutX="60.0" layoutY="25.0" prefHeight="35.0" prefWidth="260.0" text="User Login">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="usernameLabel" layoutX="60.0" layoutY="75.0" prefHeight="17.0" prefWidth="112.0" text="Username:" />
+      <Label fx:id="passwordLabel" layoutX="60.0" layoutY="125.0" prefHeight="17.0" prefWidth="112.0" text="Password:" />
+      <Button fx:id="loginBtn" layoutX="60.0" layoutY="175.0" mnemonicParsing="false" onAction="#login" prefHeight="25.0" prefWidth="55.0" text="Login" />
+      <Button fx:id="exitBtn" layoutX="265.0" layoutY="175.0" mnemonicParsing="false" onAction="#exitProgram" prefHeight="25.0" prefWidth="55.0" text="Exit" />
+      <Label fx:id="invalidUsername" layoutX="184.0" layoutY="75.0" prefHeight="17.0" prefWidth="136.0" text="Invalid Username" textFill="RED" />
+      <Label fx:id="invalidPassword" layoutX="184.0" layoutY="125.0" prefHeight="17.0" prefWidth="136.0" text="Invalid Password" textFill="RED" />
+      <Label fx:id="invalidCredentials" alignment="TOP_CENTER" layoutX="126.0" layoutY="167.0" prefHeight="66.0" prefWidth="129.0" text="Invalid credentials. Please try again." textFill="RED" wrapText="true" />
+      <Label fx:id="localeLbl" alignment="TOP_CENTER" layoutX="61.0" layoutY="209.0" prefHeight="35.0" prefWidth="260.0" text="Locale:" textAlignment="CENTER" wrapText="true" />
+   </children>
+</AnchorPane>
